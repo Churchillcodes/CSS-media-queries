@@ -9,48 +9,77 @@
 /*end general reset*/
 
 /*general styles*/
-
 body{
     font-family: "Nunito", sans-serif;
-    font-size: 1rem;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #1E293B;
-    background-image:radial-gradient(whitesmoke, #1E293B);
-}
-
-header, main, nav, footer{
-    display: grid;
-    place-content: center;
-    grid-template-columns: 100%;
-    text-align: center;
-}
-
-main{
-    flex-grow: 1;
-}
-
-nav{
-    background-color: white;
-    color:black;
-    border:2px solid black;
-    padding:0.5rem;
+    scroll-behavior: smooth;
 }
 
 header, footer{
     background-color: #1E293B;
     color: whitesmoke;
-    position:sticky;
+    text-align: center;
+    position: sticky;
 }
-
 header{
     top:0;
+}
+h1{
+    padding: 1rem;
+}
+
+nav ul{
+    background-color: aliceblue;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+li a:visited{
+    color:purple
+}
+li a:hover{
+    color:orange
+}
+li a:active{
+    color:red
+}
+
+/*CARD STYLING*/
+.container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:2rem;
+}
+
+.card{
+    background-color: whitesmoke;
+    border: 2px solid gray;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.card img{
+    width:300px;
+    height:300px;
+    border: 1px solid #333;
+    border-radius: 50%;
+}
+
+figcaption{
+    text-align: center;
 }
 
 footer{
     bottom:0;
+    padding: 1rem;
 }
+
 
 /*media queries*/
     /*SMALL*/
@@ -59,9 +88,9 @@ footer{
         background-color: green;
         background-image: radial-gradient(whitesmoke, green)
     }
-    nav{
+   /*  nav{
         display: none;
-    }
+    } */
 }
 
     /*MEDIUM*/
